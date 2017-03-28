@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <%= link_to (image_tag "logo.jpg", :alt => "image", :title => "logo.jpg", :class => "school_logo")%>
+            <ul class="nav nav-pills nav-stacked">
+
+                <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                <li><a href="/pages/about"><i class="fa fa-list-alt fa-fw"></i>About</a></li>
+                <li><a href="http://www.dths.com.au/" target="_blank"><i class="fa fa-bar-chart-o fa-fw"></i>Visit the school website</a></li>
+                <br>
+                <% if @cart %>
+                    <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+                        <%= render @cart %>
+                    <% end %>
+                <% end %>
+                <br>
+                
+                <h3>Categories</h3>
+
+                <% @categories.each do |category| %>
+                    <li class="active"><a href="<%= category_path category %>"><%= category.name %></a></li>
+                <% end %>
+
+            </ul>
+
+        </div>

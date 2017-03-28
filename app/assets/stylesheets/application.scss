@@ -1,0 +1,59 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+    padding-bottom: 60px;
+    font-family: 'Raleway', sans-serif;
+}
+h1 {
+    font-family: 'Baloo Bhaina', cursive;
+}
+
+.school_logo {
+    max-width: 70%;
+    height: auto;
+    padding-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media(max-width:990px) {
+    .school_logo {
+        display:none;
+    }
+}
+
+.class_photo {
+    border: 3px solid hotpink;
+    max-width: 500px;
+}
+
+.about {
+    color: hotpink;
+}
+
+.pink {
+    background-color: hotpink;
+    border-radius: 4px;
+}
+
+.purple {
+    background-color: purple;
+    border-radius: 4px;
+}
+
+.orange {
+    background-color: orange;
+    border-radius: 4px;
+}
+
+.red {
+    background-color: red;
+    border-radius: 4px;
+}
+
+.green {
+    background-color: green;
+    border-radius: 4px;
+}
+

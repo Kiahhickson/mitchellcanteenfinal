@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products under <%= @category.name %> </h1>
+
+<table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Add to Cart</th>
+        </tr>
+      </thead>
+      
+    <tbody>
+    <% @category.products.each do |product| %>
+        <tr>
+        <td><%= product.title %></td>
+        <td><%= number_to_currency(product.price) %></td>
+        <td><%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %></td>
+       </tr>
+    <% end %>
+</tbody>
+</table>
+
+
+
+
+<!--<%= link_to 'Edit', edit_category_path(@category) %> |-->
+<!--<%= link_to 'Back', categories_path %>-->
